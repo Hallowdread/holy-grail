@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
+:root{
+    --border-line: 1px solid #ddd;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+ul, li {
+  padding: 0;
+  list-style-type: none;
+} 
+
+/* Grid-Container */
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+
+/* Header */
+
+header{
+    grid-column: span 3;
+    text-align: center;
+    border-bottom: var(--border-line);
+}
+
+
+/* Navigation */
+
+nav{
+    padding: 30px;
+    border-right: var(--border-line);
+}
+
+nav li{
+    text-decoration: underline;
+}
+
+
+/* Article */
+
+article{
+    padding: 50px;
+}
+
+article h2{
+    font-size: 3.5rem;
+    max-width: 800px;
+}
+
+article img{
+    width: 100%;
+}
+
+article p{
+    line-height: 2.1;
+    color: #777;
+    margin-top: 30px;
+}
+
+/* Aside */
+
+aside{
+    padding: 30px;
+    border-left: var(--border-line);
+}
+
+/* Footer */
+
+footer{
+    grid-column: span 3;
+    text-align: center;
+    border-top: var(--border-line);
+    padding: 30px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px){
+    nav{
+        grid-column: span 3;
+        border-bottom: var(--border-line);
+    }
+
+    nav li{
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    article{
+        grid-column: span 2;
+        padding: 30px;
+    }
+
+    @media screen and (max-width:980px){
+        aside{
+            grid-column: span 3;
+            border-top: var(--border-line);
+        }
+
+        article{
+            grid-column: span 3;
+        }
+
+        article h2{
+            font-size: 2.5rem;
+        }
+    }
+}
